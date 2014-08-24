@@ -68,6 +68,7 @@ Currently supported languages are:
 - Javascript
 - Lua
 - PHP
+- Plain TeX
 - Python
 - R
 - Ruby

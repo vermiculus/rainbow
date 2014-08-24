@@ -26,6 +26,7 @@ class RainbowBuilder(object):
             'javascript': '1.0.9',
             'lua': '1.0.1',
             'php': '1.0.8',
+            'plain-tex': '1.0',
             'python': '1.0.9',
             'r': '1.0',
             'ruby': '1.0.6',

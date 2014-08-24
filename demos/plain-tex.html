@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<title>Syntax Highlighting</title>
+<link href="../themes/blackboard.css" rel="stylesheet" type="text/css" media="screen">
+<body>
+
+<pre>
+<code data-language="plain-tex">
+% Minimal Example
+hello, world!
+
+%% not so minimal: has a \csname
+\def\macro#1{Hello, #1!}
+\macro{Rainbow}
+
+\bye
+</code>
+</pre>
+    <script src="../js/rainbow.js"></script>
+    <script src="../js/language/plain-tex.js"></script>
+</body>

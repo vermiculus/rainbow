@@ -1,3 +1,9 @@
+/**
+ * LaTeX patterns
+ *
+ * @author Sean Allred <code@seanallred.com>
+ * @version 1.0
+ */
 Rainbow.extend('latex', [
     {
         'name': 'comment',
@@ -11,7 +17,7 @@ Rainbow.extend('latex', [
         'matches':
         {
             1: 'storage.function',
-            2: 'entity.name.function',
+            2: 'entity.name.function'
         },
         'pattern': /(\\(begin|end)){(.*)}/g
     }

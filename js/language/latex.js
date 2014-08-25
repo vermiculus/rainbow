@@ -1,3 +1,9 @@
+/**
+ * LaTeX patterns
+ *
+ * @author Sean Allred <code@seanallred.com>
+ * @version 1.0
+ */
 Rainbow.extend('latex', [
     {
         'name': 'comment',

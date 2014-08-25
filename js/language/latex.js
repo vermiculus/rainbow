@@ -17,7 +17,7 @@ Rainbow.extend('latex', [
         'matches':
         {
             1: 'storage.function',
-            2: 'entity.name.function',
+            2: 'entity.name.function'
         },
         'pattern': /(\\(begin|end)){(.*)}/g
     }

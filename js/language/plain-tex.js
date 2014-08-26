@@ -11,26 +11,10 @@ Rainbow.extend('plain-tex', [
     },
     {
         'name': 'storage.function',
-        'pattern': /\\[A-Za-z]+\*?|./g
+        'pattern': /\\([A-Za-z@]+\*?|.)/g
     },
     {
         'name': 'string',
         'pattern': /$.*?$/g
     }
 ], true)
-[LaTeX]
-# special characters
-darkred		N	[$#^_{}&]
-
-# LaTeX environments
-darkgreen	N	\\(?:begin|end)\s*\{[^}]*\}
-
-# LaTeX packages
-darkblue	N	\\usepackage\s*(?:\[[^]]*\]\s*)?\{[^}]*\}
-
-# control sequences
-blue		N	\\(?:[A-Za-z@]+|.)
-
-# comments
-red			Y	%.*
-

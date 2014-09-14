@@ -6,15 +6,27 @@
  */
 Rainbow.extend('expl3', [
     {
-        'name': 'comment',
+        'name': 'tex.space',
+        'pattern': /~/g
+    },
+    {
+        'name': 'tex.comment',
         'pattern': /%.*$/gm
+    },
+    {
+        'name': 'tex.macro.parameter',
+        'pattern': /#\d/g
+    },
+    {
+        'name': 'tex.macro',
+        'pattern': /\\[A-Za-z]+/g
     },
     {
         'matches':
         {
-            0: 'entity.name.function',
-            1: 'entity.class',
-            2: 'tag'
+            0: 'tex.function',
+            1: 'tex.function.module',
+            2: 'tex.function.argspec'
         },
         'pattern': /(\\(?:__)?[a-z]+_)[a-z_]+(:[nNpTFwcVvxof]*)/g
         // argspec `D' intentionally ignored; _D_o not use
@@ -22,27 +34,20 @@ Rainbow.extend('expl3', [
     {
         'matches':
         {
-            0: 'variable',
-            1: 'support',
-            2: 'entity.class'
+            0: 'tex.variable',
+            1: 'tex.variable.scope',
+            2: 'tex.variable.type'
         },
-        'pattern': /\\([cgl]__?)[a-z][a-z_]+(_[A-Za-z]+)/g
+        'pattern': /(\\[cgl]__?)[a-z][a-z_]+(_[A-Za-z]+)/g
     },
     {
-        'name': 'entity.name.function',
-        'pattern': /#\d/g
-    },
-    {
-        'name': 'entity.name.function',
-        'pattern': /\\[A-Za-z]+/g
-    },
-    {//keyval specs
         'matches':
         {
-            0: 'variable',
-            1: 'entity.name.function',
-            2: 'entity.class'
+            1: 'tex.keyval.key',
+            2: 'tex.function.module',
+            3: 'tex.function',
+            4: 'tex.function.argspec'
         },
-        'pattern': /[a-z\-]+\s+(\.[a-z_]+):([nNpTFwcVvxof]*)\s+=/g
+        'pattern': /([a-z\-]+)\s+(\.[a-z]+_)([a-z_]+)(:[nNpTFwcVvxof]*)\s*=/g
     }
 ], true);

@@ -6,15 +6,15 @@
  */
 Rainbow.extend('plain-tex', [
     {
-        'name': 'comment',
+        'name': 'tex.comment',
         'pattern': /%.*$/gm
     },
     {
-        'name': 'storage.function',
+        'name': 'tex.macro',
         'pattern': /\\([A-Za-z@]+\*?|.)/g
     },
     {
-        'name': 'string',
+        'name': 'tex.macro.parameter',
         'pattern': /\$.*?\$/g
     }
 ], true)

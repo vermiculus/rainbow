@@ -19,7 +19,7 @@ describe(language, function() {
 
         '% this is a comment',
 
-        '<span class="comment"># this is a comment</span>'
+        '<span class="comment">% this is a comment</span>'
     );
 
     run(
